@@ -2,10 +2,6 @@
 # coding: utf-8
 
 # ![image-2.png](attachment:image-2.png)
-# 
-# 
-
-# In[20]:
 
 
 #Importing the libraries which are mostly used for data analysis and data visualization.
@@ -18,27 +14,15 @@ import seaborn as sb
 import warnings
 warnings.filterwarnings('ignore')
 
-
-# In[21]:
-
-
 #Importing CSV file
 data=pd.read_csv('Student Mental health.csv')
 
-
-# ## Basic and Advanced EDA commands
-
-# In[22]:
-
+# Basic and Advanced EDA commands
 
 #Dipslay top two records
 print("The top two records:\n",data.head(2))
 #Display bottom two records
 print("The bottom two records:\n",data.tail(2))
-
-
-# In[23]:
-
 
 #To list down columns
 print("The columns of datasets are:\n\n",data.columns,"\n\n")
@@ -50,44 +34,20 @@ print("Accesing data:\n\n",iloc,"\n\n")
 loc=data.loc[0:2,['Choose your gender','Age']]
 print("Accesing data:\n\n",loc)
 
-
-# In[24]:
-
-
 #Checking null values and print their total along woth columns
 print("Null values with the sum:\n\n",data.isnull().sum())
-
-
-# In[25]:
-
 
 #Info() is used to et know about number of enteries.number of columns,data type and memory space it acquired
 print(data.info())
 
-
-# In[26]:
-
-
 #Describe() is used to get statistical analysis and it only deal with numeric data
 print("Statistical analysis:\n\n",data.describe())
-
-
-# In[27]:
-
 
 #Returns the count of unqiue values in column
 print("The counts of unqiue value:\n\n",data.value_counts())
 
-
-# In[28]:
-
-
 #Sample()-returns the random sample of your data
 print("Random row:\n",data.sample())
-
-
-# In[29]:
-
 
 #For coverting catagorical data into numeric data 
 print(data['Do you have Depression?'].replace(['No','Yes'],[0,1],inplace=True))
@@ -95,49 +55,30 @@ print(data['Do you have Anxiety?'].replace(['No','Yes'],[0,1],inplace=True))
 print(data['Do you have Panic attack?'].replace(['No','Yes'],[0,1],inplace=True))
 print(data['Choose your gender'].replace(['Female','Male'],[0,1],inplace=True))
 
-
-# In[30]:
-
-
 print(data.info())
-
-
-# In[31]:
-
 
 #It retunrs the duplicated value
 print("The duplicated values are:\n",data[data.duplicated()])
 
 
-# ## Visualization of data
-
-# In[32]:
-
+# Visualization of data
 
 #Box plot:Used to visualize the distribution of a set of data values.
 sb.boxplot(x='Do you have Anxiety?',y='Do you have Depression?',data=data)
 plt.show()
 
 
-# ### Obersvations:
-# 
+# Obersvations:
 # - Students who have depression they also have anxiety.
 
-# ## Univariate Analysis
+# Univariate Analysis
 # - This type of data consists of only one variable.
-
-# In[33]:
-
 
 #Pie charts-It is used to visualize the distribution of categorical data.
 counts0=data['Do you have Depression?'].value_counts()
 plt.title('Students have depression',size=24)
 print(counts0.plot(kind='pie',autopct=lambda x:f'{x:.0f}%',startangle=90))
 plt.show()
-
-
-# In[1]:
-
 
 # Create a density plot (KDE) to visualize the distribution of the 'skewed_variable'
 data['Do you have Panic attack?'].plot(kind='density', color='b')
@@ -147,17 +88,12 @@ plt.title('Density Plot of Panic attacks')
 plt.show()
 
 
-# ### Obersvations:
-# 
+# Obersvations:
 # - Students who have depression they also have anxiety.
 # - 35% students have anxiety and depression.
 
-# ## Bivariate analysis:
-# 
+# Bivariate analysis:
 # - It is a statistical method examining how two different things are related. 
-
-# In[35]:
-
 
 #Bar plot:It is uesd for comparin the frequency of different categories
 counts=data['Did you seek any specialist for a treatment?'].value_counts()
@@ -170,12 +106,8 @@ ax.set_ylabel('Number of Students')
 plt.title('Specialist treatment',size=24)
 plt.show()
 
-
-# ## Observation
+# Observation
 # - It is observe that students who is taking specialist treatment is less compared to students suffering for depression.
-
-# In[36]:
-
 
 Female = data[data['Choose your gender'] == 0]
 Male = data[data['Choose your gender'] == 1]
@@ -200,12 +132,8 @@ ax[1].set_ylabel('Frequency')
 plt.tight_layout()
 plt.show()
 
-
-# ## Observation
+# Observation
 # - Female count compared to male is more.
-
-# In[37]:
-
 
 # Assuming you have a pandas DataFrame called 'data' with columns 'Do you have Depression?' and 'Your current year of Study'
 # Set the order of the x-axis categories (optional, adjust as needed)
@@ -229,22 +157,18 @@ plt.tight_layout()  # To prevent label cutoff
 plt.show()
 
 
-# ## Multivariate analysis
+# Multivariate analysis
 # It involves evaluating multiple variables (more than two) to identify any possible association among them
 
-# In[38]:
-
-
-#Heatmap:It uses for visual representation of data with different colors.It is uesd to visualize correlation between variables.
+#Heatmap: It uses for a visual representation of data with different colors. It is used to visualize the correlation between variables.
 #It lies between -1 to +1
 sb.heatmap(data.corr(),annot=True)
 plt.title('The heatmap\n',size=24)
 
 
-# # Conclusion:
-# - We observe that student of first year is suffering more it may be because of new environment,adaptibility,etc.
+#  Conclusion:
+# - We observe that student in the first year is suffering more it may be because of the new environment, adaptability,etc.
 # - We observe that female suffers more than male.
-# - We observe that students who have depression they also have anxiety and panic attacks.
-# - We observe that students consulting doctor is less the reason ma be that they are not aware about it.
-# 
-# 
+# - We observe that students who have depression also have anxiety and panic attacks.
+# - We observe that students consulting doctors is less the reason may be that they are not aware of it.
+ 
