@@ -15,7 +15,7 @@ Uploaded CSV file from Kaggle.
 - Density plot
 - Box plot
 
-#Observations
+# Observations
 - 35% of students have anxiety and depression.
 - It is observed that students who are taking specialist treatment are less compared to students suffering from depression.
 - Female count compared to male is more.
