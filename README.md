@@ -15,6 +15,12 @@ Uploaded CSV file from Kaggle.
 - Density plot
 - Box plot
 
+  # Some snapshots of EDA
+  ![image](https://github.com/AyushiSahu18/EDA-on-Student-Mental-Health-/assets/129952366/f25222f7-4434-4ec5-9cd6-90b0066f3cc9)
+  ![image](https://github.com/AyushiSahu18/EDA-on-Student-Mental-Health-/assets/129952366/d636fe24-0ac8-4aca-958b-1cf5be4e78c5)
+
+
+
 # Observations
 - 35% of students have anxiety and depression.
 - It is observed that students who are taking specialist treatment are less compared to students suffering from depression.
