@@ -1,2 +1,12 @@
 # EDA-on-Student-Mental-Health-
-It is a EDA on Student Mental Health using python.
+It describe the in depth EDA of student mental health.
+
+# Uploaded CSV file from kaggle.
+
+#Follwing Libraries are used to perform EDA:
+ 
+ - Pandas
+ - Searborn
+ - Matplotlib
+
+# My project have bar charts,box plot,heatmap,etc
