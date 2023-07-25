@@ -7,6 +7,7 @@ Uploaded CSV file from Kaggle.
  - Pandas
  - Seaborn
  - Matplotlib
+ - Numpy
 
 # Various charts
 - Bar plot
