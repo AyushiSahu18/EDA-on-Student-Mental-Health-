@@ -17,8 +17,8 @@ Uploaded CSV file from Kaggle.
 - Box plot
 
 # Some snapshots of EDA
-  ![image](https://github.com/AyushiSahu18/EDA-on-Student-Mental-Health-/assets/129952366/f25222f7-4434-4ec5-9cd6-90b0066f3cc9)
-  ![image](https://github.com/AyushiSahu18/EDA-on-Student-Mental-Health-/assets/129952366/d636fe24-0ac8-4aca-958b-1cf5be4e78c5)
+  -Student having depression vs anxiety.
+  ![image](https://github.com/AyushiSahu18/EDA-on-Student-Mental-Health-/assets/129952366/39e22588-2145-413f-ae08-af729dd23cb2)
 
 
 
